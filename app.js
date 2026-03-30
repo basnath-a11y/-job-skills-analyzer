@@ -4,18 +4,18 @@ async function analyzeSkills() {
   const job = document.getElementById('jobInput').value.trim();
   const location = document.getElementById('locationInput').value.trim();
 
-  // Clear previous results
+  
   document.getElementById('results').innerHTML = '';
   document.getElementById('error').style.display = 'none';
   document.getElementById('filters').style.display = 'none';
 
-  // Validate input
+
   if (!job) {
     showError('Please enter a job title to search.');
     return;
   }
 
-  // Show loading
+  
   document.getElementById('loading').style.display = 'block';
 
   try {
