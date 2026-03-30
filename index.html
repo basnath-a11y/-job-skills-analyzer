@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Skills Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Job Skills Analyzer</h1>
+    <p class="subtitle">Discover what skills you need for your dream job</p>
+
+    <div class="search-box">
+      <input type="text" id="jobInput" placeholder="Enter a job title e.g. Data Analyst" />
+      <input type="text" id="locationInput" placeholder="Enter location e.g. Kigali (optional)" />
+      <button onclick="analyzeSkills()">Analyze Skills</button>
+    </div>
+
+    <div class="filters" id="filters" style="display:none">
+      <label>Sort by:</label>
+      <select id="sortSelect" onchange="renderSkills()">
+        <option value="frequency">Frequency</option>
+        <option value="alphabetical">Alphabetical</option>
+      </select>
+      <input type="text" id="searchSkill" placeholder="Filter skills..." oninput="renderSkills()" />
+    </div>
+
+    <div id="loading" style="display:none">
+      <p>⏳ Analyzing job listings...</p>
+    </div>
+
+    <div id="error" class="error" style="display:none"></div>
+
+    <div id="results"></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
