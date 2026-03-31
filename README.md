@@ -1,25 +1,24 @@
 # Job Skills Analyzer
 
 ## Description
-A web application that helps users analyze job skills requirements by fetching real-time job market data using external APIs.
+A web application that helps users analyze job skills requirements by fetching real-time job market data using the JSearch API from RapidAPI.
 
 ## Features
-- Search for job skills by job title
+- Search for job skills by job title and location
 - Filter and sort results
 - View in-demand skills for any role
-- Error handling for API downtime
+- Error handling for API downtime or invalid responses
 
 ## APIs Used
-- API Name: (add your API name here)
-- API Documentation: (add link here)
+- API Name: JSearch API
+- Provider: RapidAPI
+- Documentation: https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
 
 ## How to Run Locally
 1. Clone the repository:
-```
    git clone https://github.com/basnath-a11y/-job-skills-analyzer.git
-```
-2. Open `index.html` in your browser
-3. Enter a job title to analyze required skills
+2. Open index.html in your browser
+3. Enter a job title and location to analyze required skills
 
 ## Deployment
 The application is deployed on two web servers with a load balancer:
@@ -30,6 +29,9 @@ The application is deployed on two web servers with a load balancer:
 ## Load Balancer Configuration
 HAProxy is configured with a roundrobin algorithm to distribute traffic between Web01 and Web02.
 
+## Security
+API keys are stored securely and not exposed in the public repository.
+
 ## Credits
-- API provided by (add API provider name)
+- JSearch API by RapidAPI: https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
 - Built by IREBE Asnath
